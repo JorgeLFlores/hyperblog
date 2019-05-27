@@ -10,14 +10,15 @@ ejemplo, asignar nombre y correo como referencia y asi podremos saber quien hizo
 archivos. Seria de la sig. manera: git config --global user.name "Tu nombre" y 
 git config --global user.email "tu@email.com
  
-git add "nombre del archivo" : permite agregar un archivo al staying o limbo en el cual
+git add "nombre del archivo" : permite agregar un archivo al staging o limbo en el cual
 los cambios siempre estarar presentes aqui pero aun no se almacenaran 
 en el repositorio
 
 git add . : permite agregar todos los archivos que presentan cambios pero no han sido rastreados 
-los pasa al staying y esperan para ser agregados al repositorio
+los pasa al staging y esperan para ser agregados al repositorio. Tambien se pueden agregar carpetas
+que contengan archivos.
 
-git commit : permite agregar todos los archivos que esten en el staying al repositorio
+git commit : permite agregar todos los archivos que esten en el staging al repositorio
 NOTA es importante agregar siempre un mensaje cuando se hace el commit para ellos se escribe 
 git commit -m "Mensaje del commit"
 
@@ -29,7 +30,21 @@ git show "nombre del archivo" : permite ver la ultima modificacion al archivo y 
 su commit como (id, el mensaje ingresado y quien hizo el cambio)
 
 git log "nombre del archivo" : permite ver el historial del archivo donde salen todos los commits
-y los id y mensajes de cada uno de ellos
+y los id y mensajes de cada uno de ellos.
+git log : muestra el historial de todos los commits realizados de todos los archivos
+git log --stat : Muestra un historial de commits indicando los byts de cambios realizados
 
 git diff "id.commitA" "id.commitB" : permite observar los cambios que se realizaron entre los 
 commits indicados
+
+git reset --hard "id.commit" : Este comando permite regresar en el tiempo de vida de los cambios 
+indicando el commit al que queremos regresar pero la palabra "hard" indica que borrara todos los 
+cambios hechos despues del commit indicado y no habra manera de regresar a ellos. Es peligroso.
+
+git reset --soft "id.commit" : Este comando permite regresar en el tiempo indicando el commit 
+pero conservando todos los cambios en el staging.
+
+git checkout "id.comit(se puede usar la palabra master)" (al final puede ir el nombre del archivo 
+si no se quiere regresar todo el proyecto): permite volver a cualquier version anterior de un 
+archivo especifico o incluso del proyecto entero. esta tambien es la forma de crear ramas y 
+movernos entre ellas.
