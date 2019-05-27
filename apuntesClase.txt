@@ -1,0 +1,35 @@
+**********************************Curso profesiona de Git y Githu**********************************
+
+****************************************Comandos utilizados****************************************
+
+git init : Sirve para crear nuestro repositorio en el proyecto que queremos controlara,
+para ello debemos estar dentro de la carpeta del proyecto
+
+git config --global : permite hacer configuraciones de manera globar en el repositorio como por 
+ejemplo, asignar nombre y correo como referencia y asi podremos saber quien hizo los cambios a los
+archivos. Seria de la sig. manera: git config --global user.name "Tu nombre" y 
+git config --global user.email "tu@email.com
+ 
+git add "nombre del archivo" : permite agregar un archivo al staying o limbo en el cual
+los cambios siempre estarar presentes aqui pero aun no se almacenaran 
+en el repositorio
+
+git add . : permite agregar todos los archivos que presentan cambios pero no han sido rastreados 
+los pasa al staying y esperan para ser agregados al repositorio
+
+git commit : permite agregar todos los archivos que esten en el staying al repositorio
+NOTA es importante agregar siempre un mensaje cuando se hace el commit para ellos se escribe 
+git commit -m "Mensaje del commit"
+
+git status : permite ver como se encuentra el estatus de nuestro repositorio e indica los commit 
+hechos o si aun no se hacen, tambin muestra los archivos que existen pero que aun no se han 
+agregado con add y los que ya se agregaron y esperan un commit
+
+git show "nombre del archivo" : permite ver la ultima modificacion al archivo y muestra datos de
+su commit como (id, el mensaje ingresado y quien hizo el cambio)
+
+git log "nombre del archivo" : permite ver el historial del archivo donde salen todos los commits
+y los id y mensajes de cada uno de ellos
+
+git diff "id.commitA" "id.commitB" : permite observar los cambios que se realizaron entre los 
+commits indicados
