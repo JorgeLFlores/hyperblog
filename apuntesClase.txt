@@ -1,5 +1,20 @@
 **********************************Curso profesiona de Git y Githu**********************************
 
+Flujo de trabajo en git:
+Se tiene una carpeta donde fisicamente se almacenan los archivos del proyecto, archivos en texto plano.
+para iniciar el flijo de trabajo en git se debe iniciar con el comando "$git init" dentro de la caperta
+que sera el proyecto, con esto se inicia el fujo de trabajo donde automaticamente se crea el area de
+staging que es donde se guardan los cambios que se hacen al archivo  con el commando "$git add ." o 
+"$git add <nombrearchivo.extencion>" dejandolos listos para pasarlos al repositorio. Tambien se crea el 
+repositorio local y a este se accede guardando los cambios que se encuentran en staging usando el 
+comando "$git commit -m <"se debe escribir un mensaje">".
+Se puede regresar al inicio de un archivo o cualquier punto en la linea temporal del archivo con el 
+comando "$git reset --hard" que realizara un regreso duro, borrando todos los cambios que se hayan echo
+antes (esto puede ser peligroso), tambien esta el comando "$git reset --soft" que permite dejar todos 
+los cambios anteriores en el area de staging. Por ultimo esta el comando 
+"$git checkout <idcommit> <nombreArchivo>" esto permite regresar a cualquierpunto del archivo o proyecto
+y tambien permite crear ramas.  
+
 ****************************************Comandos utilizados****************************************
 
 git init : Sirve para crear nuestro repositorio en el proyecto que queremos controlara,
